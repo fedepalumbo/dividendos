@@ -1,0 +1,16 @@
+<h2>Dividendo</h2>
+
+<form ng-submit="addParticipant()">
+	<input type="text" ng-model="name" size="20" placeholder="add participant">
+	<input type="text" ng-model="favor" size="6" placeholder="$">
+	<input class="btn-primary" type="submit" value="add">
+</form>
+
+
+<ul>
+	<li ng-repeat="participant in participants">
+		<strong>{{participant.name}}</strong>: put <input type="text" ng-model="participant.favor" size="6" /> receives <input type="text" ng-value="participant.receives " size="6" /> <input type="button" ng-click="remove(participant.name)" value="remove" />
+	</li>
+</ul>
+<span>Total: {{total}}</span>
+<input type="button" ng-click="calculate()" value="Calculate" />

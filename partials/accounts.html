@@ -1,0 +1,11 @@
+<h2>Accounts</h2>
+
+<p>Filtrar: <input type="text" ng-model="search" placeholder="Search" /> <a href="#/accounts/add">Add</a></p>
+
+<ul>
+	<li ng-repeat="account in accounts | filter:search">
+		<strong>Id: </strong><span>{{account.id}}</span> | 
+		<strong>Description: </strong><span>{{account.description}}</span> 
+		<a href="#accounts/{{account.id}}">Ver</a></p>
+	</li>
+</ul>

@@ -1,0 +1,14 @@
+<h2>Account {{description}}</h2>
+
+<form ng-submit="addAccount()">
+	<p><input type="text" size="30" placeholder="add new account here" ng-model="description"></p>	
+	<div ng-hide="create">
+	<strong>Expenses ({{expensesCount }})</strong> <a href="#/accounts/{{accountId}}/expenses/add">Add</a>
+	<ul>
+		<li ng-repeat="expense in expenses">
+			<strong>{{expense.description}}</strong>
+		</li>
+	</ul>
+	</div>
+	<input class="btn-primary" type="submit" value="save">
+</form>
